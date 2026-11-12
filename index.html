@@ -1,605 +1,107 @@
-
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Preetham.Tech | Premium Computers & Accessories</title>
-
-    <meta name="description" content="Discover premium laptops and computer technology at Preetham.Tech. Explore Apple, HP and more.">
-
-    <link rel="stylesheet" href="style.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<title>Preetham.Tech</title>
+<style>
+body {
+    margin:0;
+    font-family:Arial;
+    background:#f5f2eb;
+    text-align:center;
+}
+header,footer {
+    background:#292720;
+    color:white;
+    padding:15px;
+}
+nav a {
+    color:white;
+    margin:12px;
+    text-decoration:none;
+}
+.products {
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+    padding:20px;
+}
+.card {
+    background:white;
+    width:220px;
+    padding:15px;
+    border-radius:8px;
+}
+.card img {
+    width:100%;
+    height:150px;
+    object-fit:contain;
+}
+.card a {
+    color:#997044;
+    text-decoration:none;
+}
+</style>
 </head>
 
 <body>
 
-    <!-- NAVIGATION BAR -->
-    <header class="header">
-        <nav class="navbar container">
-
-            <a href="#home" class="logo">
-                Preetham<span>.Tech</span>
-            </a>
-
-            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
-                ☰
-            </button>
-
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#products">Products</a></li>
-                <li><a href="#brands">Brands</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#contact" class="nav-contact">Contact Us</a></li>
-            </ul>
-
-        </nav>
-    </header>
-
-
-    <!-- HERO SECTION -->
-    <section class="hero" id="home">
-
-        <div class="hero-content container">
-
-            <div class="hero-text">
-
-                <span class="eyebrow">WELCOME TO PREETHAM.TECH</span>
-
-                <h1>
-                    Technology That
-                    <span>Moves You Forward.</span>
-                </h1>
-
-                <p>
-                    Discover powerful laptops, innovative technology
-                    and premium computing solutions designed for
-                    your everyday needs.
-                </p>
-
-                <div class="hero-buttons">
-                    <a href="#products" class="btn btn-primary">
-                        Explore Products →
-                    </a>
-
-                    <a href="#about" class="btn btn-outline">
-                        Discover More
-                    </a>
-                </div>
-
-                <div class="hero-note">
-                    <span>✓</span> Quality Technology
-                    <span>✓</span> Trusted Brands
-                    <span>✓</span> Smart Choices
-                </div>
-
-            </div>
-
-            <div class="hero-visual">
-                <div class="hero-glow"></div>
-
-                <img
-                    src="https://raw.githubusercontent.com/preethamkm5/Preetham.Tech/main/apple%20laptop%201.jpg"
-                    alt="Premium Apple laptop"
-                    class="hero-image"
-                >
-
-                <div class="floating-card">
-                    <span class="floating-icon">✦</span>
-                    <div>
-                        <strong>Premium Technology</strong>
-                        <small>Built for your ambitions</small>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- HIGHLIGHTS -->
-    <section class="highlights container">
-
-        <div class="highlight-item">
-            <div class="highlight-icon">💻</div>
-            <div>
-                <h3>Premium Laptops</h3>
-                <p>Powerful computing devices</p>
-            </div>
-        </div>
-
-        <div class="highlight-item">
-            <div class="highlight-icon">✦</div>
-            <div>
-                <h3>Trusted Brands</h3>
-                <p>Technology you can trust</p>
-            </div>
-        </div>
-
-        <div class="highlight-item">
-            <div class="highlight-icon">⚡</div>
-            <div>
-                <h3>Smart Technology</h3>
-                <p>Made for modern lifestyles</p>
-            </div>
-        </div>
-
-    </section>
-
-
-    <!-- PRODUCTS SECTION -->
-    <section class="products-section section-padding" id="products">
-
-        <div class="container">
-
-            <div class="section-heading">
-
-                <span class="eyebrow">OUR COLLECTION</span>
-
-                <h2>Explore Our <span>Products</span></h2>
-
-                <p>
-                    Find the right laptop for your work, studies,
-                    creativity and entertainment.
-                </p>
-
-            </div>
-
-
-            <!-- SEARCH BAR -->
-            <div class="product-tools">
-
-                <input
-                    type="text"
-                    id="searchInput"
-                    placeholder="Search for a laptop..."
-                    aria-label="Search products"
-                >
-
-                <div class="filter-buttons">
-
-                    <button class="filter-btn active" data-filter="all">
-                        All Products
-                    </button>
-
-                    <button class="filter-btn" data-filter="apple">
-                        Apple
-                    </button>
-
-                    <button class="filter-btn" data-filter="hp">
-                        HP
-                    </button>
-
-                    <button class="filter-btn" data-filter="other">
-                        Other Laptops
-                    </button>
-
-                </div>
-
-            </div>
-
-
-            <!-- PRODUCT CARDS -->
-            <div class="product-grid" id="productGrid">
-
-
-                <!-- PRODUCT 1 -->
-                <article class="product-card" data-category="apple">
-
-                    <div class="product-image">
-                        <span class="product-tag">APPLE</span>
-
-                        <img
-                            src="https://raw.githubusercontent.com/preethamkm5/Preetham.Tech/main/apple%20laptop%201.jpg"
-                            alt="Apple laptop model one"
-                            loading="lazy"
-                        >
-                    </div>
-
-                    <div class="product-info">
-
-                        <span class="product-category">Apple Collection</span>
-
-                        <h3>Apple MacBook</h3>
-
-                        <p>
-                            Premium design with a powerful computing
-                            experience for everyday productivity.
-                        </p>
-
-                        <a
-                            href="https://www.apple.com/mac/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="product-link"
-                        >
-                            Explore Product ↗
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-                <!-- PRODUCT 2 -->
-                <article class="product-card" data-category="apple">
-
-                    <div class="product-image">
-                        <span class="product-tag">APPLE</span>
-
-                        <img
-                            src="https://raw.githubusercontent.com/preethamkm5/Preetham.Tech/main/apple%20laptop%202.webp"
-                            alt="Apple laptop model two"
-                            loading="lazy"
-                        >
-                    </div>
-
-                    <div class="product-info">
-
-                        <span class="product-category">Apple Collection</span>
-
-                        <h3>MacBook Series</h3>
-
-                        <p>
-                            Elegant and portable laptops designed
-                            for performance and creativity.
-                        </p>
-
-                        <a
-                            href="https://www.apple.com/mac/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="product-link"
-                        >
-                            Explore Product ↗
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-                <!-- PRODUCT 3 -->
-                <article class="product-card" data-category="hp">
-
-                    <div class="product-image">
-                        <span class="product-tag">HP</span>
-
-                        <img
-                            src="https://raw.githubusercontent.com/preethamkm5/Preetham.Tech/main/hp%20laptop%201.avif"
-                            alt="HP laptop"
-                            loading="lazy"
-                        >
-                    </div>
-
-                    <div class="product-info">
-
-                        <span class="product-category">HP Collection</span>
-
-                        <h3>HP Laptop</h3>
-
-                        <p>
-                            Reliable computing solutions for
-                            students, professionals and businesses.
-                        </p>
-
-                        <a
-                            href="https://www.hp.com/in-en/shop/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="product-link"
-                        >
-                            Explore Product ↗
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-                <!-- PRODUCT 4 -->
-                <article class="product-card" data-category="other">
-
-                    <div class="product-image">
-                        <span class="product-tag">FEATURED</span>
-
-                        <img
-                            src="https://raw.githubusercontent.com/preethamkm5/Preetham.Tech/main/laptop%201.avif"
-                            alt="Featured laptop model one"
-                            loading="lazy"
-                        >
-                    </div>
-
-                    <div class="product-info">
-
-                        <span class="product-category">Laptop Collection</span>
-
-                        <h3>Performance Laptop</h3>
-
-                        <p>
-                            A versatile computing choice for
-                            multitasking and daily productivity.
-                        </p>
-
-                        <a href="#contact" class="product-link enquire-link"
-                           data-product="Performance Laptop">
-                            Enquire Now →
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-                <!-- PRODUCT 5 -->
-                <article class="product-card" data-category="other">
-
-                    <div class="product-image">
-                        <span class="product-tag">POPULAR</span>
-
-                        <img
-                            src="https://raw.githubusercontent.com/preethamkm5/Preetham.Tech/main/laptop%202.webp"
-                            alt="Featured laptop model two"
-                            loading="lazy"
-                        >
-                    </div>
-
-                    <div class="product-info">
-
-                        <span class="product-category">Laptop Collection</span>
-
-                        <h3>Everyday Laptop</h3>
-
-                        <p>
-                            A practical laptop option for learning,
-                            office work and entertainment.
-                        </p>
-
-                        <a href="#contact" class="product-link enquire-link"
-                           data-product="Everyday Laptop">
-                            Enquire Now →
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-                <!-- PRODUCT 6 -->
-                <article class="product-card" data-category="other">
-
-                    <div class="product-image">
-                        <span class="product-tag">NEW ARRIVAL</span>
-
-                        <img
-                            src="https://raw.githubusercontent.com/preethamkm5/Preetham.Tech/main/laptop%203.webp"
-                            alt="Featured laptop model three"
-                            loading="lazy"
-                        >
-                    </div>
-
-                    <div class="product-info">
-
-                        <span class="product-category">Laptop Collection</span>
-
-                        <h3>Modern Laptop</h3>
-
-                        <p>
-                            Modern computing for students,
-                            professionals and everyday users.
-                        </p>
-
-                        <a href="#contact" class="product-link enquire-link"
-                           data-product="Modern Laptop">
-                            Enquire Now →
-                        </a>
-
-                    </div>
-
-                </article>
-
-            </div>
-
-            <p class="no-results" id="noResults">
-                No matching products found. Try another search.
-            </p>
-
-        </div>
-
-    </section>
-
-
-    <!-- BRANDS SECTION -->
-    <section class="brands-section" id="brands">
-
-        <div class="container">
-
-            <div class="section-heading">
-                <span class="eyebrow">OUR TECHNOLOGY PARTNERS</span>
-                <h2>Explore Leading <span>Brands</span></h2>
-                <p>Discover technology from some of the world's well-known brands.</p>
-            </div>
-
-            <div class="brand-grid">
-
-                <a href="https://www.apple.com/" target="_blank"
-                   rel="noopener noreferrer" class="brand-box">
-                    <span class="brand-symbol">●</span>
-                    <strong>Apple</strong>
-                    <small>Explore Website ↗</small>
-                </a>
-
-                <a href="https://www.hp.com/in-en/home.html" target="_blank"
-                   rel="noopener noreferrer" class="brand-box">
-                    <span class="brand-symbol">hp</span>
-                    <strong>HP</strong>
-                    <small>Explore Website ↗</small>
-                </a>
-
-                <a href="https://www.dell.com/en-in" target="_blank"
-                   rel="noopener noreferrer" class="brand-box">
-                    <span class="brand-symbol">D</span>
-                    <strong>Dell</strong>
-                    <small>Explore Website ↗</small>
-                </a>
-
-                <a href="https://www.lenovo.com/in/en/" target="_blank"
-                   rel="noopener noreferrer" class="brand-box">
-                    <span class="brand-symbol">L</span>
-                    <strong>Lenovo</strong>
-                    <small>Explore Website ↗</small>
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ABOUT SECTION -->
-    <section class="about-section section-padding" id="about">
-
-        <div class="container about-content">
-
-            <div class="about-decoration">
-                <div class="about-icon">P<span>.T</span></div>
-                <div class="about-small-text">TECHNOLOGY FOR EVERYONE</div>
-            </div>
-
-            <div class="about-text">
-
-                <span class="eyebrow">ABOUT PREETHAM.TECH</span>
-
-                <h2>Your Technology.<br><span>Your Possibilities.</span></h2>
-
-                <p>
-                    Preetham.Tech is a computer store website created
-                    to showcase laptops and popular technology brands
-                    in one convenient place.
-                </p>
-
-                <p>
-                    Our goal is to help customers explore different
-                    computing options and discover technology that
-                    suits their needs.
-                </p>
-
-                <a href="#products" class="btn btn-primary">
-                    Browse Collection →
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- CONTACT SECTION -->
-    <section class="contact-section section-padding" id="contact">
-
-        <div class="container">
-
-            <div class="section-heading">
-
-                <span class="eyebrow">GET IN TOUCH</span>
-
-                <h2>Let's Talk <span>Technology</span></h2>
-
-                <p>
-                    Have a question about a laptop? Send us an enquiry.
-                </p>
-
-            </div>
-
-            <div class="contact-card">
-
-                <form id="contactForm">
-
-                    <div class="form-group">
-                        <label for="name">Your Name</label>
-                        <input type="text" id="name"
-                               placeholder="Enter your name" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email"
-                               placeholder="Enter your email" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="product">Product of Interest</label>
-                        <input type="text" id="product"
-                               placeholder="Which laptop are you interested in?">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="message">Your Message</label>
-                        <textarea id="message" rows="4"
-                                  placeholder="Write your enquiry..." required></textarea>
-                    </div>
-
-                    <button type="submit" class="btn btn-primary submit-btn">
-                        Send Enquiry →
-                    </button>
-
-                    <p id="formMessage" class="form-message"></p>
-
-                </form>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- FOOTER -->
-    <footer class="footer">
-
-        <div class="container footer-content">
-
-            <div>
-                <a href="#home" class="logo footer-logo">
-                    Preetham<span>.Tech</span>
-                </a>
-
-                <p>
-                    Your Gateway to Smarter Technology.
-                </p>
-            </div>
-
-            <div class="footer-links">
-                <a href="#home">Home</a>
-                <a href="#products">Products</a>
-                <a href="#brands">Brands</a>
-                <a href="#contact">Contact</a>
-            </div>
-
-        </div>
-
-        <div class="container copyright">
-            <p>
-                © <span id="year"></span> Preetham.Tech.
-                All Rights Reserved.
-            </p>
-            <p>Designed with care for technology lovers.</p>
-        </div>
-
-    </footer>
-
-
-    <script src="script.js"></script>
+<header>
+<h1>Preetham.Tech</h1>
+<nav>
+<a href="#home">Home</a>
+<a href="#products">Products</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<section id="home">
+<h2>Welcome to Preetham.Tech</h2>
+<p>Your destination for quality laptops.</p>
+</section>
+
+<h2 id="products">Our Laptop Collection</h2>
+
+<div class="products">
+
+<div class="card">
+<img src="https://raw.githubusercontent.com/preethamkm5/Preetham.Tech/main/apple%20laptop%201.jpg" alt="Apple Laptop">
+<h3>Apple Laptop</h3>
+<a href="https://www.apple.com/">View Product →</a>
+</div>
+
+<div class="card">
+<img src="https://raw.githubusercontent.com/preethamkm5/Preetham.Tech/main/apple%20laptop%202.webp" alt="MacBook">
+<h3>MacBook</h3>
+<a href="https://www.apple.com/">View Product →</a>
+</div>
+
+<div class="card">
+<img src="https://raw.githubusercontent.com/preethamkm5/Preetham.Tech/main/hp%20laptop%201.avif" alt="HP Laptop">
+<h3>HP Laptop</h3>
+<a href="https://www.hp.com/">View Product →</a>
+</div>
+
+<div class="card">
+<img src="https://raw.githubusercontent.com/preethamkm5/Preetham.Tech/main/laptop%201.avif" alt="Laptop">
+<h3>Performance Laptop</h3>
+<a href="#contact">Enquire Now →</a>
+</div>
+
+</div>
+
+<section>
+<h2>About Us</h2>
+<p>Preetham.Tech showcases quality laptops and computer products.</p>
+</section>
+
+<section id="contact">
+<h2>Contact Us</h2>
+<a href="mailto:preetham.tech@example.com">Email Us</a>
+</section>
+
+<footer>
+<p>© 2026 Preetham.Tech | All Rights Reserved</p>
+</footer>
 
 </body>
 </html>
